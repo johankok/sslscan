@@ -4,4 +4,4 @@ RUN rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.
 
 RUN microdnf install sslscan
 
-ENTRYPOINT /usr/bin/sslscan
+ENTRYPOINT ["/usr/bin/sslscan"]
