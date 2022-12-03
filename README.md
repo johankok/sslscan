@@ -18,6 +18,7 @@ spec:
       containers:
         - name: sslscan
           image: 'quay.io/johankok/sslscan:latest'
+          command: ['sslscan']
           args:
           - '--no-colour'
           - 'example.com'
