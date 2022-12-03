@@ -1,6 +1,6 @@
 # sslscan
 
-The container image is pushed to https://quay.io/repository/johankok/sslscan after every commit.
+The container image is pushed to https://quay.io/repository/johankok/sslscan after every release.
 
 ## Usage in a job
 
