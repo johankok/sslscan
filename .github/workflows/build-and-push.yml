@@ -2,23 +2,23 @@ name: Build and Push Image
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
     name: Build and push image
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-    - name: Build Image
-      id: build-image
-      uses: redhat-actions/buildah-build@v2
-      with:
-        image: sslscan
-        tags: latest ${{ github.sha }}
-        containerfiles: |
-          ./Containerfile
+      - name: Build Image
+        id: build-image
+        uses: redhat-actions/buildah-build@v2
+        with:
+          image: sslscan
+          tags: latest ${{ github.sha }}
+          containerfiles: |
+            ./Containerfile
